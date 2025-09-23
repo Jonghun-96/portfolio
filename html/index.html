@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ko">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script/jquery-1.12.3.js"></script>
+  <script src="script/script.js" defer></script>
+  <link href="style/css.css" rel="stylesheet">
+  <title>Jonghun</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+  
+
+  <!-- 구글 fira code 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<!-- 비주얼스튜디오 페이지 인트로 -->
+<div class="sticky-section">
+  <div class="sticky-box">
+    <div class="vslayout">
+      <div class="top-bar">
+
+        <div class="page-logo">
+          <img src="img/vs_logo.png" alt="비주얼스튜디오 로고">
+        </div>
+
+        <div class="vs-menu">
+          <img src="img/vs_menu.png" alt="메뉴 버튼">
+        </div>
+
+
+        <ul class="vs-text">
+          <li>파일(F)</li>
+          <li>편집(E)</li>
+          <li>선택 영역(S)</li>
+          <li>보기(V)</li>
+          <li>이동(G)</li>
+          <li>···</li>
+        </ul>
+
+        
+        <div class="vsinterface">
+
+          <div class="vs-arrow">
+            <img src="img/vs_arrowL.png" alt="왼쪽 화살표 아이콘">
+            <img src="img/vs_arrowR.png" alt="오른쪽 화살표 아이콘">
+          </div>
+
+          <div class="vs-search">
+            <div class="vs-mag">
+              <img src="img/vs_magnifier.png" alt="돋보기 아이콘">
+              <span>
+                제목 없음(작업 영역)
+              </span>
+            </div>
+          </div>
+
+          <div class="vs-chat">
+            <img src="img/vs_chat.png" alt="채팅 아이콘">
+          </div>
+
+        </div>
+
+
+        <!-- 네모 3개짜리 버튼 -->
+        <div class="vs-square">
+          <div>
+            <img src="img/vs_square1.png" alt="네모 버튼">
+          </div>
+
+          <div>
+            <img src="img/vs_square2.png" alt="네모 버튼">
+          </div>
+
+          <div>
+            <img src="img/vs_square3.png" alt="네모 버튼">
+          </div>
+        </div>
+
+
+        <!-- 윈도우 최대화 최소화 닫기 버튼 -->
+        <div class="vscontrol">
+          <div>
+            <img src="img/vs_minus.png" alt="최소화 버튼">
+          </div>
+          <div>
+            <img src="img/vs_square.png" alt="최대화 버튼">
+          </div>
+          <div class="vsclose">
+            <img src="img/vs_close.png" alt="닫기 버튼">
+          </div>
+        </div>  
+        
+      </div>
+
+      <div class="left-bar">
+
+        <ul class="vs-uplist">
+          <li><img src="img/vs_file.png" alt="파일 아이콘"></li>
+          <li><img src="img/vs_magnifier.png" alt="돋보기 아이콘"></li>
+          <li><img src="img/vs_data.png" alt="데이터 아이콘"></li>
+          <li><img src="img/vs_play.png" alt="실행 아이콘"></li>
+          <li><img src="img/vs_puzzle.png" alt="퍼즐 아이콘"></li>
+        </ul>
+
+        <ul class="vs-downlist">
+          <li><img src="img/vs_user.png" alt="유저 아이콘"></li>
+          <li><img src="img/vs_gear.png" alt="톱니 아이콘"></li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="vs-textzone">
+
+      <section class="vs-index">
+
+        <div class="vs-indextab-box">
+          
+          <div class="vs-indextab vstab">
+            <img src="img/vs_html.png" alt="html 로고">
+            <span>index.html</span>
+            <img src="img/vs_close.png" alt="닫기 버튼">
+          </div>
+
+          <div class="index-empty">
+            <!-- 라인 넣기위한 빈블록 -->
+            <span>···</span>
+          </div>
+
+        </div>
+
+        <div class="vs-indexhead">
+          <div>
+            <img src="img/vs_textmark.png">
+            <span>html&nbsp;>&nbsp;index.html&nbsp;>&nbsp;head&nbsp;>&nbsp;body</span>
+          </div>
+        </div>
+<!----------- vs코드 왼쪽 index.html에 들어갈 내용물------------->
+        <div class="vs-indexzone">
+          <div class="index-code fira-code-main">
+            <div class="index-number">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+              <span>15</span>
+              <span>16</span>
+              <span>17</span>
+              <span>18</span>
+              <span>19</span>
+              <span>20</span>
+              <span>21</span>
+              <span>22</span>
+              <span>23</span>
+              <span>24</span>
+              <span>25</span>
+              <span>26</span>
+              <span>27</span>
+              <span>28</span>
+              <span>29</span>
+              <span>30</span>
+              <span>31</span>
+              <span>32</span>
+            </div>
+
+            <pre class="code-content fira-code-main">
+            
+          <span class="keyword">&lt;script&gt;</span>
+              <span class="keyword">const</span> developer = {
+                
+  name: <span class="string">"김종훈"</span>,
+  role: <span class="string">"Web Publisher"</span>,
+  goal: <span class="string">"Pixel-perfect design & clean code"</span>,
+  location: <span class="string">"Seoul, Korea"</span>
+};
+
+
+<span class="keyword">console</span>.log(<span class="string">`Hello World🌍  
+I'm ${developer.name}, crafting web experiences 
+with ${developer.role}.`</span>);
+
+<span class="comment">// Always learning, always improving ✨</span>
+
+<span class="number">0429</span>
+            </pre>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="vs-css">
+
+        <div class="vs-csstab-box">
+          
+          <div class="vs-csstab vstab">
+            <img src="img/vs_css.png" alt="css 로고">
+            <span>css.css</span>
+            <img src="img/vs_close.png" alt="닫기 버튼">
+          </div>
+          
+          <div class="vs-javatab vstab">
+            <img src="img/vs_java.png" alt="java 로고">
+            <span>script.js</span>
+            <img src="img/vs_close.png" alt="닫기 버튼">
+          </div>
+          
+          <div class="css-empty">
+            <!-- 라인 넣기위한 빈블록 -->
+            <img src="img/vs_squaregrid.png" alt="그리드 버튼">
+            <span>···</span>
+          </div>
+          
+        </div>
+
+        <div class="vs-csshead">
+          <div>
+            <img src="img/vs_textmark.png">
+            <span>html&nbsp;>&nbsp;style&nbsp;>&nbsp;css.css</span>
+          </div>
+        </div>
+<!----------- vs코드 오른쪽 css.css에 들어갈 내용물------------->
+        <div class="vs-csszone">
+          <div class="css-code fira-code-main">
+            <div class="css-number">
+              <span>776</span>
+              <span>777</span>
+              <span>778</span>
+              <span>779</span>
+              <span>780</span>
+              <span>781</span>
+              <span>782</span>
+              <span>783</span>
+              <span>784</span>
+              <span>785</span>
+              <span>786</span>
+              <span>787</span>
+              <span>788</span>
+              <span>789</span>
+              <span>790</span>
+              <span>791</span>
+              <span>792</span>
+              <span>793</span>
+              <span>794</span>
+              <span>795</span>
+              <span>796</span>
+              <span>797</span>
+              <span>798</span>
+              <span>799</span>
+              <span>800</span>
+              <span>801</span>
+              <span>802</span>
+              <span>803</span>
+              <span>804</span>
+              <span>805</span>
+              <span>806</span>
+            </div>
+
+            <pre class="code-content fira-code-main">
+
+
+
+<span class="comment">/* style.css */</span>
+
+
+<span class="keyword">body</span> {
+  creativity: <span class="number">100%</span>;
+  efficiency: <span class="number">100%</span>;
+  bugs: <span class="number">0%</span>;
+  passion: <span class="string">infinite</span>;
+  }
+
+
+<span class="keyword">:root</span> {
+  --dream: <span class="string">"Design → Code → Reality"</span>;
+  --motto: <span class="string">"Clean Code, Clear Mind"</span>;
+  }
+            </pre>
+
+          </div>
+        </div>
+
+      </section>
+
+
+    </div>
+
+
+
+    
+  </div>
+  <div class="hello">
+    <p>Hello,</p>
+    <p>World!</p>
+    <p>I'm JH.</p>
+  </div>
+  
+</div>
+
+
+<header>
+  <div id="head">
+    <h2>
+      <a href="javascript:;" onClick="gnb_click(0)">
+        Jonghun.
+      </a>
+    </h2>
+    <aside>
+      <a href="javascript:;" class="nav nav1" onClick="gnb_click(1)">Hello?</a>
+      <a href="javascript:;" class="nav nav2" onClick="gnb_click(2)">Project</a>
+      <a href="javascript:;" class="nav nav3" onClick="gnb_click(3)">About Me</a>
+    </aside>
+  </div>
+</header>
+
+<div class="content">
+  <img src="img/profile1.png" class="profile" alt="프로필사진">
+  <div class="name-intro">
+    <p>
+      김종훈<br>
+      JH, Kim
+    </p>
+  </div>
+  <div class="introduce">
+    <p>
+      안녕하세요? 아이디어를 디자인으로, 디자인을 웹으로 구현하는 
+      신입 웹퍼블리셔 김종훈입니다. 작은 디테일에서도 완성도를 높이고, 
+      효율적인 코드를 통해 깔끔한 결과물을 만드는 것을 목표로 하고 있습니다.
+    </p>
+    <br>
+    <p>
+      저는 불필요하고 혼란스러운 효과는 지양하며, 사용자 경험을 최우선합니다. 
+      과하지 않으면서도 필요한 순간에 적절한 인터랙션을 적용해,
+      직관적이고 편리한 웹 환경을 구현하고자 합니다.
+    </p>
+  </div>
+  
+</div>
+
+<div class="project">
+  <span>
+    PROJECT
+  </span>
+</div>
+
+<div class="container">
+  
+  <div class="d1 dClick">
+    <a href="javascript:;">
+      <img src="img/whale1.png" alt="whale1" class="whale1 firstImgW">
+      <img src="img/whale2.png" alt="whale2" class="whale2 secondImgW">
+      <div class="fadeTxt">
+        <h4>
+          The Whale
+        </h4>
+        <span>
+          고래를 모티브로 디자인 한 해양 체험관. 
+          고래가 입을 벌리고 있는 모습을 형상화하였고 지느러미와 유선형 몸체를 
+          디자인에 적용했다. 푸른빛의 고래와 하얀 파도의 색감을 조화롭게 녹여냈다.
+        </span>
+      </div>    
+    </a>
+  </div>
+
+
+  
+  <div class="d2 dClick">
+    <a href="javascript:;">
+      <img src="img/apache1.png" alt="apache1" class="apache1 firstImg">
+      <img src="img/apache2.png" alt="apache2" class="apache2 secondImg">
+      <span>APACHE</span>
+    </a>
+  </div>
+
+  <div class="d3 dClick">
+    <a href="javascript:;">
+      <img src="img/pulse1.png" alt="pulse1" class="pulse1 firstImg">
+      <img src="img/pulse2.png" alt="pulse2" class="pulse2 secondImg">
+      <span>PULSE</span>
+    </a>
+  </div>
+
+  <div class="d4 dClick">
+    <a href="javascript:;">
+      <img src="img/walker1.png" alt="walker1" class="walker1 firstImg">
+      <img src="img/walker2.png" alt="walker2" class="walker2 secondImg">
+      <span>WALKER</span>
+    </a>
+  </div>
+
+  <div class="d5 dClick">
+    <a href="javascript:;">
+      <span>ROBOTIC<br>ARM</span>
+      <img src="img/robot1.png" alt="robot1" class="robot1 firstImg">
+      <img src="img/robot2.png" alt="robot2" class="robot2 secondImg">
+    </a>
+  </div>
+
+  <div class="d6 dClick">
+    <a href="javascript:;">
+      <img src="img/fence1.png" alt="fence1" class="fence1 firstImgW">
+      <img src="img/fence2.png" alt="fence2" class="fence2 secondImgW">
+      <div class="fadeTxt">
+        <h4>Stretcher Fence</h4>
+        <span>
+          현장에서 들것으로 변형하여 사용 가능한 안전펜스.
+          펜스에서 들것으로 유연한 변형이 가능하도록 디자인하였다.
+          
+        </span>
+      </div>  
+    </a>
+  </div>
+
+  <div class="d7 dClick">
+    <a href="javascript:;">
+      <img src="img/basic1.png" alt="basic1" class="basic1 firstImg">
+      <img src="img/basic2.png" alt="basic2" class="basic2 secondImg">
+      <span>Assembly</span>
+    </a>
+  </div>
+
+<div class="d8 dClick">
+    <a href="javascript:;">
+      <img src="img/bottle1.png" alt="bottle1" class="bottle1 firstImg">
+      <img src="img/bottle2.png" alt="bottle2" class="bottle2 secondImg">
+      <span>Assembly</span>
+    </a>
+  </div>
+
+
+  <div class="d9 dClick">
+    <a href="javascript:;">
+      <img src="img/lint1.png" alt="lint1" class="lint1 firstImg">
+      <img src="img/lint2.png" alt="lint2" class="lint2 secondImg">
+      <span>LINT<br>REMOVER</span>
+    </a>
+  </div>
+
+  
+  
+  <div class="d10 dClick">
+    <a href="javascript:;">
+      <img src="img/grip1.png" alt="grip1" class="grip1 firstImg">
+      <img src="img/grip2.png" alt="grip2" class="grip2 secondImg">
+      <span>GRIP<br>MACHINE</span>
+    </a>
+  </div>
+
+
+  <div class="d11 dClick">
+    <a href="javascript:;">
+      <img src="img/splact1.png" alt="splact1" class="splact1 firstImgW">
+      <img src="img/splact2.png" alt="splact2" class="splact2 secondImgW">
+      <span class="splactTxt">SPLACT</span>
+      <div class="fadeTxt">
+        <h4>Splact</h4>
+        <span>
+          빨래건조대와 행거로 활용 가능한 치닝디핑.
+          집에 설치한 운동기구가 행거가 되는 것을 보고 아이디어를 얻었다.
+          운동할 때는 운동기구로, 평소에는 빨래건조대와 행거로 사용 가능하다.
+        </span>
+      </div>  
+    </a>
+  </div>
+  
+</div>
+
+<figure>
+
+  <div class="modalClose"> <!--닫기버튼-->
+    <span></span>
+    <span></span>
+  </div> 
+
+  <div class="modal-bg"></div> <!--모달 바깥 어두운배경-->
+
+  <!-- 웨일 111111111111111111111111 -->
+  <div class="modal-box modal-box1">
+    
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Main panel</span>
+          <img src="img/whale_panel1.jpg" alt="메인 판넬" class="whale-panel1">
+        </div>
+        <div class="slide slide2">
+          <span>Sub panel</span>
+          <img src="img/whale_panel2.jpg" alt="서브 판넬" class="whale-panel2">
+        </div>
+        <div class="slide slide3">
+          <span>Exhibition</span>
+          <img src="img/whale_photo1.jpg" alt="전시회 사진" class="whale-photo1">
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+
+  <div class="main-icon main-icon1">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+    
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+        <img src="img/sub_icon_photoshop.png" alt="포토샵">
+        <img src="img/sub_icon_illustrator.png" alt="일러스트">
+        <img src="img/sub_icon_autocad.png" alt="오토캐드">
+        <img src="img/sub_icon_sketchup.png" alt="스케치업">
+        <img src="img/sub_icon_lumion.png" alt="루미온">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+  <!-- 아파치 2222222222222222222222222222-->  
+  <div class="modal-box modal-box2">
+    
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Modeling</span>
+          <img src="img/apache_render1.jpg" alt="아파치 렌더">
+          <img src="img/apache_render2.jpg" alt="아파치 렌더">
+          <img src="img/apache_render3.jpg" alt="아파치 렌더">
+          <img src="img/apache_render4.jpg" alt="아파치 렌더">
+        </div>
+        <div class="slide slide2">
+          <span>Render view</span>
+          <img src="img/apache_rendering1.png" alt="아파치 렌더">
+          <img src="img/apache_rendering2.png" alt="아파치 렌더">
+          <img src="img/apache_rendering3.png" alt="아파치 렌더">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="main-icon main-icon2">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+  <!-- 스피커 33333333333333333333333333333333--> 
+  <div class="modal-box modal-box3">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Concept</span>
+          <img src="img/pulse_render1.png" alt="펄스 스케치">
+        </div>
+        <div class="slide slide2">
+          <span>Sketch</span>
+          <img src="img/pulse_render2.png" alt="펄스 스케치">
+          <img src="img/pulse_render3.png" alt="펄스 스케치">
+        </div>
+        <div class="slide slide3">
+          <span>Modeling</span>
+          <img src="img/pulse_rendering1.png" alt="펄스 모델링">
+          <img src="img/pulse_rendering2.png" alt="펄스 모델링">
+          <img src="img/pulse_rendering3.png" alt="펄스 모델링">
+        </div>
+        <div class="slide slide4">
+          <span>Panel</span>
+          <img src="img/pulse_panel1.png" alt="펄스 판넬">
+        </div>
+      </div>
+    </div>
+      
+  </div>
+
+  <div class="main-icon main-icon3">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+        <img src="img/sub_icon_photoshop.png" alt="포토샵">
+        <img src="img/sub_icon_illustrator.png" alt="일러스트">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+
+  
+  <!-- 보행기 444444444444444444444444444444444444--> 
+  <div class="modal-box modal-box4">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Panel</span>
+          <img src="img/walker_panel1.png" alt="보행기 판넬">
+        </div>
+        
+        <div class="slide slide2">
+          <span>Development</span>
+          <img src="img/walker_render1.png" alt="보행기 모델링">
+          <img src="img/walker_render2.png" alt="보행기 모델링">
+          <img src="img/walker_render3.png" alt="보행기 모델링">
+          <img src="img/walker_rendering1.png" alt="보행기 렌더링">
+        </div>
+      </div>
+        
+
+    </div>
+  </div>
+
+  <div class="main-icon main-icon4">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+        <img src="img/sub_icon_photoshop.png" alt="포토샵">
+        <img src="img/sub_icon_illustrator.png" alt="일러스트">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+
+  <!-- 로봇팔 5555555555555555555555555555555555555555--> 
+  <div class="modal-box modal-box5">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+
+        <div class="slide slide1">
+          <span>Modeling</span>
+          <img src="img/robot_render1.png" alt="로봇팔 모델링">
+          <img src="img/robot_render2.png" alt="로봇팔 모델링">
+          <img src="img/robot_render3.png" alt="로봇팔 모델링">
+        </div>
+
+        <div class="slide slide2">
+          <span>Panel</span>
+          <img src="img/robot_panel1.jpg" alt="로봇팔 판넬">
+        </div>
+
+      </div>
+
+      
+      
+    </div>
+  </div>
+
+  <div class="main-icon main-icon5">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+        <img src="img/sub_icon_photoshop.png" alt="포토샵">
+        <img src="img/sub_icon_illustrator.png" alt="일러스트">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+
+  <!-- 안전펜스 6666666666666666666666666666666666666--> 
+  <div class="modal-box modal-box6">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Panel</span>
+          <img src="img/fence_panel1.png" alt="안전펜스 판넬">
+          
+        </div>
+        <div class="slide slide2">
+          <span>Exhibition</span>
+          <img src="img/fence_panel2.png" alt="안전펜스 판넬">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="main-icon main-icon6">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+        <img src="img/sub_icon_photoshop.png" alt="포토샵">
+        <img src="img/sub_icon_illustrator.png" alt="일러스트">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+  <!-- 보풀 분해 77777777777777777777777777777777777777777--> 
+  <div class="modal-box modal-box7">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Modeling</span>
+          <img src="img/lint_assembly1.png" alt="보풀제거기 모델링">
+          <img src="img/lint_assembly2.png" alt="보풀제거기 모델링">
+          <img src="img/lint_assembly3.png" alt="보풀제거기 모델링">
+        </div>
+        <div class="slide slide2">
+          <span>Render view</span>
+          <img src="img/lint_assembly4.png" alt="보풀제거기 모델링">
+          <img src="img/lint_assembly5.png" alt="보풀제거기 모델링">
+          <img src="img/lint_assembly6.png" alt="보풀제거기 모델링">
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <div class="main-icon main-icon7">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+  <!-- 가습기 분해 8888888888888888888888888888888888888888888--> 
+  <div class="modal-box modal-box8">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Structure</span>
+          <img src="img/bottle_render1.png" alt="가습기">
+        </div>
+
+        <div class="slide slide2">
+          <span>Sketch</span>
+          <img src="img/bottle_render2.png" alt="가습기">
+        </div>
+
+        <div class="slide slide3">
+          <span>Modeling</span>
+          <img src="img/bottle_render3.png" alt="가습기">
+          <img src="img/bottle_render4.png" alt="가습기">
+          <img src="img/bottle_render5.png" alt="가습기">
+        </div>
+
+        <div class="slide slide4">
+          <span>Mock-up</span>
+          <img src="img/bottle_render6.png" alt="가습기">
+          <img src="img/bottle_render7.png" alt="가습기">
+        </div>
+        <div class="slide slide5">
+          <span>Render view</span>
+          <img src="img/bottle_render8.png" alt="가습기">
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <div class="main-icon main-icon8">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_creo.png" alt="크레오">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+  <!-- 보풀 999999999999999999999999999999999999999999--> 
+  <div class="modal-box modal-box9">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+        <div class="slide slide1">
+          <span>Modeling</span>
+          <Img src="img/lint_render1.png" alt="보풀제거기">
+          
+        </div>
+        <div class="slide slide2">
+          <span>Render view</span>
+          <Img src="img/lint_render2.png" alt="보풀제거기">
+        </div>
+
+        <div class="slide slide3">
+          <span>Panel</span>
+          <Img src="img/lint_panel1.png" alt="보풀제거기 판넬">
+          <Img src="img/lint_panel2.png" alt="보풀제거기 판넬">
+        </div>
+
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <div class="main-icon main-icon9">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+        <img src="img/sub_icon_photoshop.png" alt="포토샵">
+        <img src="img/sub_icon_illustrator.png" alt="일러스트">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+  <!-- 악력기 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10--> 
+  <div class="modal-box modal-box10">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+
+        <div class="slide slide1">
+          <span>Modeling</span>
+          <img src="img/grip_render1.png" alt="악력기">
+        </div>
+
+        <div class="slide slide2">
+          <span>Render view</span>
+          <img src="img/grip_render2.png" alt="악력기">
+        </div>
+
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <div class="main-icon main-icon10">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+  <!-- 턱걸이 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11--> 
+  <div class="modal-box modal-box11">
+    <div class="modal pop-modal">
+      <div class="modal-wrapper">
+
+        <div class="slide slide1">
+          <span>Panel</span>
+          <img src="img/splact_panel1.png" alt="스플랙트 판넬">
+        </div>
+
+        <div class="slide slide2">
+          <span>Development</span>
+          <img src="img/splact_render1.png" alt="스플랙트">
+          <img src="img/splact_render2.png" alt="스플랙트">
+          <img src="img/splact_render3.png" alt="스플랙트">
+        </div>
+
+        <div class="slide slide3">
+          <span>Render view</span>
+          <img src="img/splact_render4.png" alt="스플랙트">
+          <img src="img/splact_render5.png" alt="스플랙트">
+          <img src="img/splact_render6.png" alt="스플랙트">
+          <img src="img/splact_render7.png" alt="스플랙트">
+          <img src="img/splact_render8.png" alt="스플랙트">
+        </div>
+
+      </div>
+
+
+      
+    </div>
+  </div>
+
+  <div class="main-icon main-icon11">
+    <div class="main-icon-box">
+      <img src="img/main_icon.png" class="fixed-icon" alt="사용된 프로그램 아이콘">
+      <img src="img/main_icon.png" class="layer-icon" alt="사용된 프로그램 아이콘">
+      <div class="sub-icon">
+        <img src="img/sub_icon_rhino.jpg" alt="라이노">
+        <img src="img/sub_icon_keyshot.png" alt="키샷">
+        <img src="img/sub_icon_photoshop.png" alt="포토샵">
+        <img src="img/sub_icon_illustrator.png" alt="일러스트">
+      </div>
+      <span>Design tools</span>
+    </div>
+  </div>
+
+
+
+</figure>
+
+<footer>
+  
+</footer>
+
+</body>
+</html>
+
+
+
+
+
