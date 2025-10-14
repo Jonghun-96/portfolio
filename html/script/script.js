@@ -1,104 +1,89 @@
 
 
-
-
-
-
-
-/////////////////////////////////////////////////
-
-
-// sticky-section 동안 header가 안보이게 하는 코드 
-
-
-const header = document.querySelector("header");
-const htmlEl = document.documentElement;
-const bodyEl = document.body;
-
-function toggleUI() {
-  if (window.scrollY < 1000) {
-    // 헤더 숨기기
-    header.style.opacity = 0;
-    header.style.visibility = "hidden";
-
-  } else {
-    // 헤더 보이기
-    header.style.opacity = 1;
-    header.style.visibility = "visible";
-  }
-}
-
-// 스크롤 이벤트
-window.addEventListener("scroll", toggleUI);
-
-// ✅ 페이지 로드 직후에도 한 번 실행
-window.addEventListener("load", toggleUI);
-
-
-
-
-
-//스크롤 내리면 .hello 이벤트 발생
-
-const world = document.querySelector('.hello p:nth-child(2)');
-const imjh  = document.querySelector('.hello p:nth-child(3)');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY || window.pageYOffset;
-
-  if (scrollY > 100) {
-    world.style.opacity = 0;
-    imjh.style.opacity  = 1;
-  } else {
-    world.style.opacity = 1;
-    imjh.style.opacity  = 0;
-  }
-});
-
-
-
-
-//스크롤에 따라 sticky-section 이벤트 발생
-
 document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector("header");
+
+  const elements = {
+    first: document.querySelector('.sticky-text p:nth-child(1)'),
+    world: document.querySelector('.sticky-text p:nth-child(2)'),
+    imjh:  document.querySelector('.sticky-text p:nth-child(3)')
+  };
+
   const topBar   = document.querySelector('.top-bar');
   const leftBar  = document.querySelector('.left-bar');
-
+  const bottomBar = document.querySelector('.bottom-bar');
   const leftZone  = document.querySelector('.vs-index');
   const rightZone = document.querySelector('.vs-css'); 
 
+  // === fadeIn/fadeOut 함수 ===
+  function fadeIn(el) {
+    if (!el) return;
+    el.style.display = 'block';           // DOM 표시
+    requestAnimationFrame(() => {         // 다음 프레임에서 opacity 적용
+      el.style.opacity = '1';
+    });
+  }
 
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY || window.pageYOffset;
+  function fadeOut(el) {
+    if (!el) return;
+    el.style.opacity = '0';
+    el.addEventListener('transitionend', function handler() {
+      el.style.display = 'none';         // 트랜지션 끝나면 완전히 숨김
+      el.removeEventListener('transitionend', handler);
+    });
+  }
 
+  function handleScroll() {
+    const y = window.scrollY || window.pageYOffset;
 
-    // topBar
-    if (topBar) {
-      if (scrollY > 700) topBar.classList.add('slideTop');
-      else topBar.classList.remove('slideTop');
+    // === header 처리 ===
+    if (y < 1200) {
+      header.style.opacity = 0;
+      header.style.visibility = 'hidden';
+    } else {
+      header.style.opacity = 1;
+      header.style.visibility = 'visible';
     }
 
-    // leftBar
-    if (leftBar) {
-      if (scrollY > 700) leftBar.classList.add('slideLeft');
-      else leftBar.classList.remove('slideLeft');
+    // === .sticky-text p fade 처리 ===
+    if (y > 1000) {
+      Object.values(elements).forEach(fadeOut);
+    } else if (y > 100) {
+      fadeIn(elements.first);
+      fadeOut(elements.world);
+      fadeIn(elements.imjh);
+    } else {
+      fadeIn(elements.first);
+      fadeIn(elements.world);
+      fadeOut(elements.imjh);
     }
 
-    // leftZone
+    // === sticky-section 애니메이션 ===
+    const add = y > 400;
+    if (topBar) topBar.classList.toggle('slideTop', add);
+    if (leftBar) leftBar.classList.toggle('slideLeft', add);
+    if (bottomBar) bottomBar.classList.toggle('slideBottom', add);
     if (leftZone) {
-      if (scrollY > 700) leftZone.classList.add('slideLeft','slideTop');
-      else leftZone.classList.remove('slideLeft','slideTop');
+      leftZone.classList.toggle('slideLeft', add);
+      leftZone.classList.toggle('slideTop', add);
     }
-
-    // rightZone
     if (rightZone) {
-      if (scrollY > 700) rightZone.classList.add('slideRight','slideTop');
-      else rightZone.classList.remove('slideRight','slideTop');
+      rightZone.classList.toggle('slideRight', add);
+      rightZone.classList.toggle('slideTop', add);
     }
-  });
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll); // 로드 직후 한 번 실행
 });
 
-// 버튼누르면 이동하는 이벤트
+
+
+
+
+// nav 버튼누르면 이동하는 이벤트
+
+// jonghun. 누르면 맨위로 이동
 
 var btnStop = true;
 function gnb_click(e){ // gnb 클릭 애니메이션 이벤트
@@ -108,20 +93,26 @@ function gnb_click(e){ // gnb 클릭 애니메이션 이벤트
 			btnStop = true;
 		}, 500)
 		if(e == 0){
-      $('html').animate({scrollTop : 0}, 500, 'swing');
+      $('html').animate({scrollTop : 0}, 1000, 'swing');
     }
-		if(e == 1){
-			$('html').animate({scrollTop : 310}, 500, 'swing');
-		}
-		if(e == 2){
-			$('html').animate({scrollTop : 3010}, 500, 'swing');
-		}
-		if(e == 3){
-			$('html').animate({scrollTop : 3610}, 500, 'swing');
-		}
 	}
 }
 
+// 메뉴 누르면 해당 위치로 이동
+document.addEventListener('DOMContentLoaded', () => {
+  const navButtons = document.querySelectorAll('.nav');
+
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();  // href="#" 같은 기본 동작 차단
+      const targetId = btn.dataset.target;
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
 
 //이미지가 천천히 변하는 이벤트
 
@@ -211,7 +202,15 @@ $("[class^=d]").on("click", function() {
 
 
 
-//////////////////////////////////////////////////////////////
+
+
+// 바깥 영역 터치 시 상태 초기화
+document.addEventListener('click', e => {
+  if (!e.target.closest('.project-item') && activeItem) {
+    activeItem.classList.remove('show-second');
+    activeItem = null;
+  }
+});
 
 
 
