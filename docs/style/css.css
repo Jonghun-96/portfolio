@@ -565,9 +565,9 @@ body::-webkit-scrollbar-track{
 .introillust{position: absolute; top: 150px; left: 650px; width: 40%;}
 .sticky-text{
   position: fixed;
-  top: 38%; left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%); 
-  font-size: 12vw; line-height: 1.2em;
+  font-size: 6vw;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 6px white;
   
@@ -594,19 +594,17 @@ body::-webkit-scrollbar-track{
   position: absolute;
 }
 .sticky-text p:nth-child(1){position: relative; transition: opacity 1s ease;}
-.sticky-text p:nth-child(2),
+/* .sticky-text p:nth-child(2),
 .sticky-text p:nth-child(3){
   position: absolute; top: 150%; left: 50%;
   transform: translate(-50%, -50%);
   display: block;
   margin: 0;
-  /* margin-top: -30px; */
   opacity: 0;         
   transition: opacity 1s ease;
-}
+} */
 
 
-.sticky-text p:nth-child(2){opacity: 1;}
 
 
 
@@ -1290,7 +1288,7 @@ figure .modal{
 
 .skills h3{
   display: flex;
-  font-size: 20px;
+  font-size: 16px;
   margin-right: auto;
   padding-bottom: 20px;
 }
@@ -1319,20 +1317,19 @@ figure .modal{
 
 .self-intro {padding: 20px;}
 
-.self-intro h3 {font-size: 20px;}
+.self-intro h3 {font-size: 16px;}
 
 .self-intro p {
   line-height: 26px;
-  font-size: 16px; text-align: justify;
+  font-size: 13px; text-align: justify;
 }
 
 .education{padding: 20px; line-height: 26px;}
 
-.education h3{font-size: 20px;}
+.education h3{font-size: 16px;}
 
 
-.education ul li{font-size: 16px;}
-.education ul li:first-child{padding-bottom: 10px;}
+.education ul li{font-size: 13px;padding-bottom: 6px;}
 
 
 .about-me .my-info dl{
@@ -1343,7 +1340,7 @@ figure .modal{
 }
 
 .info-list{padding: 20px;}
-.info-list dd{margin-left: auto;}
+.info-list dd{margin-left: auto; font-size: 13px;}
 
 .my-git{transition: 0.2s; transform: translateX(3px);}
 .my-git:hover{
