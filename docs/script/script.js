@@ -201,7 +201,7 @@ $("[class^=d]").on("click", function() {
 });
 
 
-
+let activeItem = null;
 
 
 // 바깥 영역 터치 시 상태 초기화
