@@ -650,7 +650,7 @@ header{
 
 #head aside{z-index: 10; width: auto; display: flex; gap: 20px;}
 #head aside a{
-  width: auto; display: block; text-align: center; 
+  width: auto;
   color: rgb(255, 255, 255, 0.8);
   padding: 12px; 
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
@@ -659,7 +659,10 @@ header{
 }
 #head aside a:hover{color: rgb(166, 37, 37);}
 
-.nav{position: relative;}
+.nav{
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
 .nav::before{
   content: ""; width: 0; height: 2px; 
   position: absolute;
